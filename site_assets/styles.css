@@ -2,4 +2,11 @@
 	max-width: 400px;
 	display: block;
 	margin: 0 auto;
+	margin-top:1.5em;
+	margin-bottom: 1.5em;
 }
+
+#homepage_p{
+	font-size: 1.5em;
+}
+
