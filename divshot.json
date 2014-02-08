@@ -1,0 +1,8 @@
+{
+  "name": "siyathu",
+  "root": "./",
+  "clean_urls": true,
+  "error_page": "/error",
+  "cache_control": {},
+  "routes": {}
+}
