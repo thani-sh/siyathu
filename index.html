@@ -1,15 +1,20 @@
 <!doctype html>
-<html lang="en" ng-app="siyathu">
+<html class="no-js" lang="en" ng-app="siyathu">
 <head>
     <meta charset="UTF-8">
-    <title>Siyathu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siyathu | @TODO Some useful description text</title>
+    <link rel="stylesheet" href="site_assets/vendor/foundation/css/foundation.min.css"/>
     <link rel="stylesheet" href="site_assets/styles.css">
 </head>
 <body ng-controller="MainController">
-    <main id="wrapper" ng-view="pageview"></main>
-    <script src="site_assets/vendor/jquery.min.js"></script>
+    <main id="wrapper" class="row" ng-view="pageview"></main>
+    <script src="site_assets/vendor/foundation/js/vendor/jquery.js"></script>
+    <script src="site_assets/vendor/foundation/js/vendor/modernizr.js"></script>
+    <script src="site_assets/vendor/foundation/js/foundation.min.js"></script>
     <script src="site_assets/vendor/angular.min.js"></script>
     <script src="site_assets/vendor/angular-route.min.js"></script>
     <script src="site_assets/scripts.js"></script>
+    <script>$(document).foundation();</script>
 </body>
 </html>
