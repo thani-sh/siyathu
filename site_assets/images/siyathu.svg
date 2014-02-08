@@ -10,12 +10,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="744.09448819"
-   height="1052.3622047"
+   width="412.26001"
+   height="288.3212"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="New document 1">
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="siyathu.svg">
   <defs
      id="defs4">
     <linearGradient
@@ -35,20 +35,30 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="188.15718"
-     inkscape:cy="614.78489"
+     inkscape:cx="38.548919"
+     inkscape:cy="139.51678"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:snap-global="false"
      inkscape:window-width="1366"
-     inkscape:window-height="746"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1">
+     inkscape:window-height="721"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
     <inkscape:grid
        type="xygrid"
-       id="grid2985" />
+       id="grid2985"
+       empspacing="10"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       originx="-149.60826px"
+       originy="-415.7143px" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -58,14 +68,15 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-149.60826,-348.32669)">
     <path
        style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="M 554.35347,526.21803 C 388.29121,436.09986 380.75525,466.1864 380.75525,466.1864 c 0,0 -13.65158,5.1788 -8.04162,25.86 3.15928,11.64675 5.91642,17.15723 5.91642,17.15723"
@@ -105,7 +116,7 @@
        d="m 392.85714,635.93359 a 2.8571429,0.71428573 0 1 1 -5.71428,0 2.8571429,0.71428573 0 1 1 5.71428,0 z" />
     <path
        sodipodi:type="arc"
-       style="fill:#2f1111;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-width:1.00014562;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:#2f1111;fill-opacity:1;stroke:#ffffff;stroke-width:1.00014567;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="path2987"
        sodipodi:cx="275"
        sodipodi:cy="402.36218"
