@@ -27,7 +27,8 @@ Contributors:
 
 Tested Browsers:
 ---
-> Chrome Version 32.0.1700.107 m
+> Chrome Version 32.0.1700.107 m (Windows 7, Ubuntu Linux)
+> Chrome for Android (Android 4.4)
 
 Version
 ----
