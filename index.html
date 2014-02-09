@@ -142,16 +142,16 @@
 <body>
 <script>
 function MyController($scope, $firebase) {
-  var peopleRef = new Firebase("https://ss14-team-140.firebaseio.com/channels");
-  $scope.channels = $firebase(channelRef);
-  $scope.addChannel = function() {
+  var channelRef = new Firebase("https://ss14-team-140.firebaseio.com/channels");
+  //$scope.channels = $firebase(channelRef);
+ // $scope.addChannel = function() {
     // AngularFire $add method
-    $scope.channels.$add($scope.newChannel);
+  //  $scope.channels.$add($scope.newChannel);
     //or add a new person manually
    // peopleRef.update({name: 'Alex', age: 35});
  
-    $scope.newChannel = "";
-  }
+  //  $scope.newChannel = "";
+  //}
 }
 </script>
     <main id="wrapper">
