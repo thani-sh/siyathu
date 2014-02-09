@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="twitter:card" content="Twitter">
+	<meta name="twitter:url" content="http://ss14-team-140.divshot.io/">
+	<meta name="twitter:title" content="Siyathu">
+	<meta name="twitter:description" content="Siyathu is an online live video mixing web app which reduces the cost of high end hardware and software by providing a lightweight infrastructure for live video production.">
+	<meta name="twitter:image" content="site_assets/images/siyathu.svg">
+	<meta property="og:image" content="site_assets/images/siyathu.svg"/>
+	<meta property="og:title" content="Siyathu"/>
+	<meta property="og:url" content="http://ss14-team-140.divshot.io/"/>
+	<meta property="og:site_name" content="Siyathu Online Video Mixer"/>
     <title>Siyathu | Online Video Mixer</title>
     <link href='http://fonts.googleapis.com/css?family=Lovers+Quarrel|Alegreya+Sans+SC:300,400' rel='stylesheet' type='text/css'>
     <style>
@@ -176,6 +185,7 @@
 
         <div class="fullBlock fullHeight homepage light">
             <div class="inner">
+<<<<<<< HEAD
                 <h3 class="homepage sectionhead">Active Channels<br> <small>(coming soon)</small></h3>
                 <ul style="display:none">
                     <li><a href="#/Channel1">Channel 1</a></li>
@@ -183,6 +193,14 @@
                     <li><a href="#/Channel1">Channel 1</a></li>
                     <li><a href="#/Channel1">[ new channel ]</a></li>
                 </ul>
+=======
+                <h3 class="homepage sectionhead">Active Channels</h3>
+				<div class="channel_button"><div style="margin-left:-8px"><input type="text" ng-model="newChannel" placeholder="New Channel Name" style="border:none; border-bottom: dotted 1px #DEDCDE; background-color: transparent; font-family:Alegreya Sans SC" ></div>
+				<a href="siyathu.html#/{{newChannel}}/editor" >Join</a></div>
+                
+                    <div ng-repeat="(channel, info) in channels" ><a href="siyathu.html#/{{channel}}/" style="font-family:Alegreya Sans SC">{{channel}}</a></div>
+                
+>>>>>>> 58f417beacab9a5fef49377f36e3a9a3dd7733c9
             </div>
         </div>
 
