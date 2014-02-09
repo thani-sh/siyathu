@@ -11,11 +11,31 @@
 			<i class="fa fa-trash-o fa-2x"></i>
 		</div>
 	</div>
+	<div class="row">
+		<a href="#" data-dropdown="drop1">Has Dropdown</a>
+		<ul id="drop1" class="f-dropdown" data-dropdown-content>
+			<li>
+				<a href="#">This is a link</a>
+			</li>
+			<li>
+				<a href="#">This is another</a>
+			</li>
+			<li>
+				<a href="#">Yet another</a>
+			</li>
+		</ul>
+		<a href="#" data-dropdown="drop2">Has Content Dropdown</a>
+		<div id="drop2" data-dropdown-content class="f-dropdown content">
+			<p>
+				Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!
+			</p>
+		</div>
+	</div>
 	<div class="row" id="vclips">
 		<div class="row">
 			<div id="carousel1" class="owl-carousel">
 				<div draggable="true">
-					<video controls class="thumbs">
+					<video controls id="thumbs" class="thumbs">
 						<source src="movie.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
@@ -109,5 +129,5 @@
 <style type="text/css" media="screen">
 	video {
 		width: 100%;
-	}
+	}
 </style>

@@ -91,14 +91,15 @@
 
     window.siyathu.controller('EditorController', function ($scope, $routeParams) {
         L(':: [controller] EditorController');
-        L(JSON.stringify($routeParams));
+        var channelRef = new Firebase('https://ss14-team-140.firebaseio.com/channels/'+$routeParams.channelId);
+		channelRef.onDisconnect().remove();
+		channelRef.set({foo:'bar'});
 		$("#carousel1").owlCarousel({
 			pagination : false
 		});
 		$("#carousel2").owlCarousel({
 			pagination : false
 		});
-		
     });
 
 
