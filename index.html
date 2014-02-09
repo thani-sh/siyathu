@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Siyathu | Online Video Mixer</title>
     <link href='http://fonts.googleapis.com/css?family=Lovers+Quarrel|Alegreya+Sans+SC:300,400' rel='stylesheet' type='text/css'>
+	<script src="https://cdn.firebase.com/v0/firebase.js"></script><!-- Firebase -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script><!-- AngularJS -->
+	<script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script><!-- AngularFire Plugin -->
+ 
+<script>
+  var myApp = angular.module("siyathu", ["firebase"]);
+ 
+  function MyController($scope, $firebase) {
+    var peopleRef = new Firebase("https://ss14-team-140.firebaseio.com/channels");
+    // Automatically syncs everywhere in realtime
+    $scope.channels = $firebase(channelRef);
+  }
+</script>
     <style>
 
         html, body {
@@ -110,12 +123,37 @@
             font-family: 'Alegreya Sans SC';
             font-size: 24px;
         }
+		.channel_button{
+			border: medium none;
+			font-size: 20px;
+			background: none repeat scroll 0% 0% rgb(239, 237, 237);
+			padding: 12px 18px;
+			width: 10%;
+			overflow: hidden;
+			color: rgb(42, 17, 17);
+			margin: 1%;
+			display: inline-block;
+		}
     </style>
     <style id="verticals">
         .fullHeight { height: 768px; }
     </style>
 </head>
 <body>
+<script>
+function MyController($scope, $firebase) {
+  var peopleRef = new Firebase("https://ss14-team-140.firebaseio.com/channels");
+  $scope.channels = $firebase(channelRef);
+  $scope.addChannel = function() {
+    // AngularFire $add method
+    $scope.channels.$add($scope.newChannel);
+    //or add a new person manually
+   // peopleRef.update({name: 'Alex', age: 35});
+ 
+    $scope.newChannel = "";
+  }
+}
+</script>
     <main id="wrapper">
 
         <div class="fullBlock fullHeight homepage light">
@@ -139,7 +177,7 @@
 
         <div class="fullBlock fullHeight homepage light">
             <div class="inner">
-
+                <img data-interchange="[site_assets/images/diagram-v.svg, (default)], [site_assets/images/diagram-h.svg, (large)]">
             </div>
         </div>
 
@@ -157,6 +195,20 @@
         <div class="fullBlock fullHeight homepage light">
             <div class="inner">
                 <h3 class="homepage sectionhead">Active Channels<br> <small>(coming soon)</small></h3>
+				<a href="#" class="channel_button">Create a new Channel</a> 
+<script>
+
+var julieRef = new Firebase('https://ss14-team-140.firebaseio.com/channels');
+julieRef.on('value', function(snapshot) {
+  if(snapshot.val() === null) {
+    alert('User julie does not exist.');
+  } else {
+    var firstName = snapshot.val().name.first;
+    var lastName = snapshot.val().name.last;
+    alert('User julie’s full name is: ' + firstName + ' ' + lastName);
+  }
+});
+	</script>			
                 <ul style="display:none">
                     <li><a href="#/Channel1">Channel 1</a></li>
                     <li><a href="#/Channel1">Channel 1</a></li>
