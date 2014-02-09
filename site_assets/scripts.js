@@ -92,6 +92,14 @@
     window.siyathu.controller('EditorController', function ($scope, $routeParams) {
         L(':: [controller] EditorController');
         L(JSON.stringify($routeParams));
+		console.log('Testing editor');
+		alert();
+		$("#carousel1").owlCarousel({
+			pagination : false
+		});
+		$("#carousel2").owlCarousel({
+			pagination : false
+		});
     });
 
 
