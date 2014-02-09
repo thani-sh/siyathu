@@ -1,29 +1,21 @@
 <div class="large-12 columns">
 	<div class="row">
-		<video width="100%" height="100%" controls>
-			<source src="site_assets/Dildara.flv" type="video/mp4">
-			Your browser does not support the video tag.
+		<video id="editor-preview-video" width="100%" height="100%" controls>
 		</video>
-	</div>	
+	</div>
 	<div class="row" id="vclips">
 		<div class="row">
 			<div id="carousel1" class="owl-carousel">
-				<div class="bootstrap-popover" data-content='<video controls autoplay="true" class="thumbs"><source src="" type="video/mp4"> browser does not support the video tag.</video>'>
-					<video class="vid" controls autoplay="true"> 
-						<source src="site_assets/" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>
-				</div>				
+				<div id="editor-remote-videos" class="bootstrap-popover" data-content='<video controls autoplay="true" class="thumbs"><source src="" type="video/mp4"> browser does not support the video tag.</video>'>
+                    <!--REMOTE VIDEOS-->
+				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div id="carousel2" class="owl-carousel">
 				<div class="bootstrap-popover" data-content='<video controls autoplay="true" class="thumbs"><source src="" type="video/mp4"> browser does not support the video tag.</video>'>
-					<video class="vid" controls autoplay="true"> 
-						<source src="site_assets/" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>
-				</div>	
+					<!--LOCAL CLIPS-->
+				</div>
 			</div>
 		</div>
 	</div>
@@ -31,7 +23,8 @@
 <style type="text/css" media="screen">
 	video {
 		width: 100%;
-	}	.thumbs{
+	}
+	.thumbs{
 		width:150%;
 		height:150%;
 		max-height: 340px;
@@ -41,7 +34,11 @@
 		width:150%;
 		max-width: 430px;
 		max-height: 340px;
-	}	.close{
+	}
+	.close{
 		float:right;
+	}
+	.vid {
+	    display: inline-block;
 	}
 </style>
