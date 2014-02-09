@@ -1,12 +1,28 @@
-#homepage_logo{
-	max-width: 400px;
-	display: block;
-	margin: 0 auto;
-	margin-top:1.5em;
-	margin-bottom: 1.5em;
+.fullBlock {
+    display: table;
+    width: 100%;
 }
 
-#homepage_p{
+.fullBlock .inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.homepage.logo {
+	max-width: 400px;
+	display: block;
+	margin: 1.5em auto;
+}
+
+.homepage.title {
+    color: #2f1111;
+    font-family: 'Lovers Quarrel', cursive;
+    font-size: 150px;
+    margin-top: -100px;
+}
+
+p.lead {
 	font-size: 1.5em;
 }
 
