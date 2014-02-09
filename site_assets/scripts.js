@@ -197,6 +197,7 @@
         window.changeStream = function (streamId) {
             var video = document.getElementById(streamId);
             window.previewVideoElement.src = video.src;
+            window.previewVideoElement.play();
             forwardStream(window.streams[streamId]);
         }
 
