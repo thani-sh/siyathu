@@ -1,16 +1,178 @@
 <!doctype html>
-<html class="no-js" lang="en" ng-app="siyathu">
+<html class="no-js" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Siyathu | @TODO Some useful description text</title>
-    <link rel="stylesheet" href="site_assets/vendor/foundation/css/foundation.min.css"/>
-    <link rel="stylesheet" href="site_assets/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="site_assets/vendor/popover/bootstrap-tooltip-and-popover.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
-    <link rel="stylesheet" href="site_assets/vendor/owl-carousel/owl.carousel.css">
-	<link rel="stylesheet" href="site_assets/vendor/owl-carousel/owl.theme.css">
-    <link rel="stylesheet" href="site_assets/styles.css">
-    <style id="verticals">.fullHeight { height: 768px; }</style>
+    <title>Siyathu | Online Video Mixer</title>
+    <link href='http://fonts.googleapis.com/css?family=Lovers+Quarrel|Alegreya+Sans+SC:300,400' rel='stylesheet' type='text/css'>
+    <style>
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .fullBlock {
+            display: table;
+            width: 100%;
+        }
+
+        .fullBlock .inner {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .homepage p,
+        .homepage h1,
+        .homepage h2,
+        .homepage h3,
+        .homepage h4,
+        .homepage h5,
+        .homepage h6 {
+            font-family: 'Lovers Quarrel';
+            font-weight: normal;
+        }
+
+        .homepage.logo {
+            width: 90%;
+            max-width: 360px;
+        }
+
+        .homepage.title {
+            color: #2f1111;
+            font-size: 120px;
+            line-height: 0.5;
+            margin: 0;
+        }
+
+        .homepage.tagline {
+            color: #000000;
+            font-size: 60px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .homepage.sectionhead {
+            font-size: 60px;
+            margin: 0;
+        }
+
+        .homepage.light .sectionhead {
+            color: #2f1111;
+        }
+
+        .homepage.dark .sectionhead {
+            color: #fcfafa;
+        }
+
+        .homepage.light {
+            background: #fcfafa;
+            color: #2f1111;
+        }
+
+        .homepage.light a {
+            color: #2f1111;
+            text-decoration: none;
+        }
+
+        .homepage.dark {
+            background: #2f1111;
+            color: #fcfafa;
+        }
+
+        .homepage.dark a {
+            color: #fcfafa;
+            text-decoration: none;
+        }
+
+        .homepage p,
+        .homepage ul {
+            width: 90%;
+            max-width: 600px;
+            line-height: 1.2;
+            margin: 0 auto;
+        }
+
+        .homepage ul li {
+            display: block;
+        }
+
+        .homepage p {
+            font-size: 40px;
+        }
+
+        .homepage p.sans {
+            font-family: 'Alegreya Sans SC';
+        }
+
+        .homepage ul {
+            font-family: 'Alegreya Sans SC';
+            font-size: 24px;
+        }
+    </style>
+    <style id="verticals">
+        .fullHeight { height: 768px; }
+    </style>
+</head>
+<body>
+    <main id="wrapper">
+
+        <div class="fullBlock fullHeight homepage light">
+            <div class="inner">
+                <img src="site_assets/images/siyathu.svg" class="homepage logo"/>
+                <h1 class="homepage title">Siyathu</h1>
+                <h2 class="homepage tagline">Video production on the web</h2>
+                <p>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ss14-team-140.divshot.io" data-text="Check out Siyathu (Online Video Mixer) by Quatorz" data-via="staticshowdown">Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </p>
+            </div>
+        </div>
+
+        <div class="fullBlock fullHeight homepage dark">
+            <div class="inner">
+                <h3 class="homepage sectionhead">What is Siyathu?</h3>
+                <p>Siyathu is an online live video mixing web app which reduces the cost of high end hardware and software by providing a lightweight infrastructure for live video production.</p>
+            </div>
+        </div>
+
+        <div class="fullBlock fullHeight homepage light">
+            <div class="inner">
+
+            </div>
+        </div>
+
+        <div class="fullBlock fullHeight homepage dark">
+            <div class="inner">
+                <h3 class="homepage sectionhead">Features</h3>
+                <ul class="no-bullet">
+                    <li>Support all HTML5 WebRTC enabled devices<br><small>(Mozilla Firefox, Google Chrome, Android, ...)</small></li>
+                    <li>Offline Support (Mix local video sources)</li>
+                    <li>... More under construction ...</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="fullBlock fullHeight homepage light">
+            <div class="inner">
+                <h3 class="homepage sectionhead">Active Channels<br> <small>(coming soon)</small></h3>
+                <ul style="display:none">
+                    <li><a href="#/Channel1">Channel 1</a></li>
+                    <li><a href="#/Channel1">Channel 1</a></li>
+                    <li><a href="#/Channel1">Channel 1</a></li>
+                    <li><a href="#/Channel1">[ new channel ]</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="fullBlock fullHeight homepage dark">
+            <div class="inner">
+                <p class="sans">Licensed Under <a href="http://choosealicense.com/licenses/gpl-v3/">GNU GPL v3</a></p>
+            </div>
+        </div>
+
+    </main>
     <script>
         (function(){
 
@@ -27,18 +189,5 @@
 
         })();
     </script>
-</head>
-<body ng-controller="MainController">
-    <main id="wrapper" ng-view="pageview"></main>
-    <script src="site_assets/vendor/foundation/js/vendor/jquery.js"></script>
-    <script src="site_assets/vendor/foundation/js/vendor/modernizr.js"></script>
-    <script src="site_assets/vendor/foundation/js/foundation.min.js"></script>
-    <script src="site_assets/vendor/owl-carousel/owl.carousel.min.js"></script>
-    <script src="site_assets/vendor/popover/bootstrap-tooltip-and-popover.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="site_assets/vendor/angular.min.js"></script>
-    <script src="site_assets/vendor/angular-route.min.js"></script>
-    <script src="site_assets/vendor/firebase.js"></script>
-    <script src="site_assets/scripts.js"></script>
-    <script>$(document).foundation();</script>
 </body>
 </html>

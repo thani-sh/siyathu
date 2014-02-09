@@ -1,113 +1,133 @@
-(function() {
+(function(){
 
-	window.L = function() {
-		if(window.L.enabled)
-			console.log(arguments);
-	}
 
-	window.L.enabled = true;
+    window.L = function () {
+        if(window.L.enabled)
+            console.log(arguments);
+    }
 
-	// Scripts to run when page is ready
+    window.L.enabled = true;
 
-	$(function() {
-		L(':: [window] Page Loaded and Ready');
-	})
-	// Initialize Siyathu App
 
-	window.siyathu = angular.module('siyathu', ['ngRoute']);
 
-	// Initialzie Siyathu Routes
+    // Scripts to run when page is ready
 
-	window.siyathu.config(function($routeProvider) {
+    $(function(){
+        L(':: [window] Page Loaded and Ready');
+    })
 
-		$routeProvider.when('/homepage', {
-			templateUrl : 'site_views/website/homepage.html',
-			controller : 'StaticController'
-		});
 
-		$routeProvider.when('/error/invalid-url', {
-			templateUrl : 'site_views/errors/invalid-url.html',
-			controller : 'StaticController'
-		});
 
-		$routeProvider.when('/error', {
-			templateUrl : 'site_views/errors/unknown.html',
-			controller : 'StaticController'
-		});
+    // Initialize Siyathu App
 
-		$routeProvider.when('/:channelId/', {
-			templateUrl : 'site_views/channel/viewer.html',
-			controller : 'ViewerController'
-		});
+    window.siyathu = angular.module('siyathu', ['ngRoute']);
 
-		$routeProvider.when('/:channelId/editor', {
-			templateUrl : 'site_views/channel/editor.html',
-			controller : 'EditorController'
-		});
 
-		$routeProvider.when('/:channelId/publisher', {
-			templateUrl : 'site_views/channel/publisher.html',
-			controller : 'PublisherController'
-		});
 
-		$routeProvider.otherwise({
-			redirectTo : '/homepage'
-		});
+    // Initialzie Siyathu Routes
 
-	});
-	// MainController
-	// @TODO Description
+    window.siyathu.config(function ($routeProvider) {
 
-	window.siyathu.controller('MainController', function($scope, $route, $routeParams) {
-		L(':: [controller] MainController');
-		L(JSON.stringify($routeParams));
-	});
-	// StaticController
-	// @TODO Description
+        $routeProvider.when('/homepage', {
+            templateUrl:'site_views/website/homepage.html'
+            ,controller:'StaticController'
+        });
 
-	window.siyathu.controller('ViewerController', function($scope, $routeParams) {
-		L(':: [controller] ViewerController');
-		L(JSON.stringify($routeParams));
-	});
-	// EditorController
-	// @TODO Description
+        $routeProvider.when('/error/invalid-url', {
+            templateUrl:'site_views/errors/invalid-url.html'
+            ,controller:'StaticController'
+        });
 
-	window.siyathu.controller('EditorController', function($scope, $routeParams) {
-		L(':: [controller] EditorController');
-		var channelRef = new Firebase('https://ss14-team-140.firebaseio.com/channels/' + $routeParams.channelId);
-		channelRef.onDisconnect().remove();
-		channelRef.set({
-			foo : 'bar'
-		});
-		$("#carousel1").owlCarousel({
-			pagination : false
-		});
-		$("#carousel2").owlCarousel({
-			pagination : false
-		});
-		$('.bootstrap-popover').popover({
-			placement : 'top',
-			trigger : 'hover',
-			delay : {
-				show : 10,
-				hide : 1000
-			}
-		});
-	});
-	// PublisherController
-	// @TODO Description
+        $routeProvider.when('/error', {
+            templateUrl:'site_views/errors/unknown.html'
+            ,controller:'StaticController'
+        });
 
-	window.siyathu.controller('PublisherController', function($scope, $routeParams) {
-		L(':: [controller] PublisherController');
-		L(JSON.stringify($routeParams));
-	});
-	// StaticController
-	// @TODO Description
+        $routeProvider.when('/:channelId/', {
+            templateUrl:'site_views/channel/viewer.html'
+            ,controller:'ViewerController'
+        });
 
-	window.siyathu.controller('StaticController', function($scope, $routeParams) {
-		L(':: [controller] StaticController');
-		L(JSON.stringify($routeParams));
-	});
-	// EOF
+        $routeProvider.when('/:channelId/editor', {
+            templateUrl:'site_views/channel/editor.html'
+            ,controller:'EditorController'
+        });
+
+        $routeProvider.when('/:channelId/publisher', {
+            templateUrl:'site_views/channel/publisher.html'
+            ,controller:'PublisherController'
+        });
+
+        $routeProvider.otherwise({
+            redirectTo: '/error/invalid-url'
+        });
+
+    });
+
+
+
+    // MainController
+    // @TODO Description
+
+    window.siyathu.controller('MainController', function ($scope, $route, $routeParams) {
+        L(':: [controller] MainController');
+        L(JSON.stringify($routeParams));
+    });
+
+
+
+    // StaticController
+    // @TODO Description
+
+    window.siyathu.controller('ViewerController', function ($scope, $routeParams) {
+        L(':: [controller] ViewerController');
+        L(JSON.stringify($routeParams));
+    });
+
+
+
+    // EditorController
+    // @TODO Description
+
+    window.siyathu.controller('EditorController', function ($scope, $routeParams) {
+        L(':: [controller] EditorController');
+
+        (function(){
+            var channelRef = new Firebase('https://ss14-team-140.firebaseio.com/channels/' + $routeParams.channelId);
+            channelRef.onDisconnect().remove();
+            channelRef.set({ foo : 'bar' });
+        })();
+
+        (function(){
+            $("#carousel1").owlCarousel({ pagination : false });
+            $("#carousel2").owlCarousel({ pagination : false });
+            $('.bootstrap-popover').popover({ placement : 'top', trigger : 'hover', delay : {show : 10, hide: 1000} });
+        })();
+
+    });
+
+
+
+    // PublisherController
+    // @TODO Description
+
+    window.siyathu.controller('PublisherController', function ($scope, $routeParams) {
+        L(':: [controller] PublisherController');
+        L(JSON.stringify($routeParams));
+    });
+
+
+
+    // StaticController
+    // @TODO Description
+
+    window.siyathu.controller('StaticController', function ($scope, $routeParams) {
+        L(':: [controller] StaticController');
+        L(JSON.stringify($routeParams));
+    });
+
+
+
+    // EOF
 
 })();
