@@ -16,7 +16,7 @@ Contributors:
 
 Tested Browsers:
 ---
-> Chrome Version 32.0.1700.107 m, Firefox Version 27 
+> Chrome Version 32.0.1700.107 m
 
 Version
 ----
