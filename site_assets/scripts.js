@@ -91,7 +91,19 @@
 
     window.siyathu.controller('EditorController', function ($scope, $routeParams) {
         L(':: [controller] EditorController');
-        L(JSON.stringify($routeParams));
+
+        (function(){
+            var channelRef = new Firebase('https://ss14-team-140.firebaseio.com/channels/' + $routeParams.channelId);
+            channelRef.onDisconnect().remove();
+            channelRef.set({ foo : 'bar' });
+        })();
+
+        (function(){
+            $("#carousel1").owlCarousel({ pagination : false });
+            $("#carousel2").owlCarousel({ pagination : false });
+            $('.bootstrap-popover').popover({ placement : 'top', trigger : 'hover', delay : {show : 10, hide: 1000} });
+        })();
+
     });
 
 
