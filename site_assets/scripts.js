@@ -101,9 +101,20 @@
         (function(){
             $("#carousel1").owlCarousel({ pagination : false });
             $("#carousel2").owlCarousel({ pagination : false });
-            $('.bootstrap-popover').popover({ placement : 'top', trigger : 'hover', delay : {show : 10, hide: 1000} });
+            $('.bootstrap-popover').popover({
+            	 placement : 'top',
+            	 trigger : 'hover',
+            	 delay : {show : 10, hide: 10}
+           	});
         })();
-
+		
+		
+		$('#carousel1 .vid').click(function(){
+			alert("change the video stream");
+		});
+		$('#carousel2 .vid').click(function(){
+			alert("change the video stream");
+		});
     });
 
 
