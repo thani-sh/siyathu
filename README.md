@@ -1,7 +1,7 @@
 Siyathu Video Production
 =========
 
-Guide Line for Judges:
+Guide Lines for Judges:
 ---
 
   - Use this link to access our website http://ss14-team-140.divshot.io/
