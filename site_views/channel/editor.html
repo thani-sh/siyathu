@@ -1,7 +1,7 @@
 <div class="large-12 columns">
 	<div class="row">
 		<video width="100%" height="100%" controls>
-			<source src="file.mp4" type="video/mp4">
+			<source src="site_assets/Dildara.flv" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
 	</div>
@@ -11,67 +11,48 @@
 			<i class="fa fa-trash-o fa-2x"></i>
 		</div>
 	</div>
-	<div class="row">
-		<a href="#" data-dropdown="drop1">Has Dropdown</a>
-		<ul id="drop1" class="f-dropdown" data-dropdown-content>
-			<li>
-				<a href="#">This is a link</a>
-			</li>
-			<li>
-				<a href="#">This is another</a>
-			</li>
-			<li>
-				<a href="#">Yet another</a>
-			</li>
-		</ul>
-		<a href="#" data-dropdown="drop2">Has Content Dropdown</a>
-		<div id="drop2" data-dropdown-content class="f-dropdown content">
-			<p>
-				Some text that people will think is awesome! Some text that people will think is awesome! Some text that people will think is awesome!
-			</p>
-		</div>
-	</div>
+	
 	<div class="row" id="vclips">
 		<div class="row">
 			<div id="carousel1" class="owl-carousel">
-				<div draggable="true">
-					<video controls id="thumbs" class="thumbs">
+				<div class="bootstrap-popover" data-content='<video controls autoplay="true" class="thumbs"><source src="site_assets/Fun.- We Are Young ft. Janelle Monáe (ACOUSTIC).mp4" type="video/mp4"> browser does not support the video tag.</video>' data-original-title="This is the Title">
+					<video controls autoplay="true"> 
+						<source src="site_assets/" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+				<div>
+					<video controls>
 						<source src="movie.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</div>
 				<div>
-					<video controls class="thumbs">
+					<video controls>
 						<source src="movie.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</div>
 				<div>
-					<video controls class="thumbs">
+					<video controls>
 						<source src="movie.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</div>
 				<div>
-					<video controls class="thumbs">
+					<video controls>
 						<source src="movie.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</div>
 				<div>
-					<video controls class="thumbs">
+					<video controls>
 						<source src="movie.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</div>
 				<div>
-					<video controls class="thumbs">
-						<source src="movie.mp4" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>
-				</div>
-				<div>
-					<video controls class="thumbs">
+					<video controls>
 						<source src="movie.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
@@ -81,43 +62,43 @@
 		<div class="row">
 			<div id="carousel2" class="owl-carousel">
 				<div>
-					<video controls class="thumbs">
+					<video controls>
 						<source src="movie.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</div>
 				<div>
-					<video controls class="thumbs">
+					<video controls>
 						<source src="movie.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</div>
 				<div>
-					<video controls class="thumbs">
+					<video controls>
 						<source src="movie.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</div>
 				<div>
-					<video controls class="thumbs">
+					<video controls>
 						<source src="movie.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</div>
 				<div>
-					<video controls class="thumbs">
+					<video controls>
 						<source src="movie.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</div>
 				<div>
-					<video controls class="thumbs">
+					<video controls>
 						<source src="movie.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</div>
 				<div>
-					<video controls class="thumbs">
+					<video controls>
 						<source src="file.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
@@ -129,5 +110,15 @@
 <style type="text/css" media="screen">
 	video {
 		width: 100%;
-	}
+	}	.thumbs{
+		width:150%;
+		height:150%;
+		max-height: 340px;
+		max-width: 400px;
+	}
+	.popover-inner{
+		width:150%;
+		max-width: 430px;
+		max-height: 340px;
+	}
 </style>
