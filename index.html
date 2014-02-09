@@ -176,13 +176,18 @@
 
         <div class="fullBlock fullHeight homepage light">
             <div class="inner">
-                <h3 class="homepage sectionhead">Active Channels<br> <small>(coming soon)</small></h3>
-                <ul style="display:none">
-                    <li><a href="#/Channel1">Channel 1</a></li>
-                    <li><a href="#/Channel1">Channel 1</a></li>
-                    <li><a href="#/Channel1">Channel 1</a></li>
-                    <li><a href="#/Channel1">[ new channel ]</a></li>
-                </ul>
+                <h3 class="homepage sectionhead">Active Channels</h3>
+				<div class="channel_button"><div style="margin-left:-8px"><input type="text" ng-model="newChannel" placeholder="New Channel Name" class="homepage newChannel" ></div>
+				<a href="siyathu.html#/{{newChannel}}/editor" >Join</a></div>
+                
+                    <div class="homepage channelsWrapper">
+						<a ng-repeat="(channel, info) in channels" href="siyathu.html#/{{channel}}/" class="homepage channelItem">{{channel}}</a>
+					</div>
+                <style>
+					.homepage.newChannel {border:none; border-bottom: dotted 1px #DEDCDE; background-color: transparent; font-family:Alegreya Sans SC;outline: none;text-align: center;}
+					.homepage.channelsWrapper { width:90%; margin: 20px auto; text-align: center; }
+					.homepage.channelItem { display: inline-block;font-family: Alegreya Sans SC;padding: 6px 18px;margin: 3px 4px;background: #efedef; }
+				</style>
             </div>
         </div>
 
