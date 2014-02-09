@@ -98,6 +98,7 @@
 		$("#carousel2").owlCarousel({
 			pagination : false
 		});
+		
     });
 
 
