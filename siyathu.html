@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="siyathu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siyathu | @TODO Some useful description text</title>
+    <link rel="stylesheet" href="site_assets/vendor/foundation/css/foundation.min.css"/>
+    <link rel="stylesheet" href="site_assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="site_assets/styles.css">
+    <style id="verticals">.fullHeight { height: 768px; }</style>
+    <script>
+        (function(){
+
+            function resetFullHeightStyles () {
+                document.getElementById('verticals')
+                .innerHTML = '.fullHeight { height: '+window.innerHeight+'px; }';
+            }
+
+            window.addEventListener('resize', function(event){
+                resetFullHeightStyles();
+            });
+
+            resetFullHeightStyles();
+
+        })();
+    </script>
+</head>
+<body ng-controller="MainController">
+    <main id="wrapper" ng-view="pageview"></main>
+    <script src="site_assets/vendor/foundation/js/vendor/jquery.js"></script>
+    <script src="site_assets/vendor/foundation/js/vendor/modernizr.js"></script>
+    <script src="site_assets/vendor/foundation/js/foundation.min.js"></script>
+    <script src="site_assets/vendor/angular.min.js"></script>
+    <script src="site_assets/vendor/angular-route.min.js"></script>
+    <script src="site_assets/vendor/firebase.js"></script>
+    <script src="site_assets/scripts.js"></script>
+    <script>$(document).foundation();</script>
+</body>
+</html>

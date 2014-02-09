@@ -59,7 +59,7 @@
         });
 
         $routeProvider.otherwise({
-            redirectTo: '/homepage'
+            redirectTo: '/error/invalid-url'
         });
 
     });
