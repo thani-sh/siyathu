@@ -126,6 +126,8 @@
         window.previewVideoElement = document.getElementById('editor-preview-video');
         window._temp_channel = ($routeParams.channelId || 'defaultChannel') + '::' + 'editor<->publisher';
 
+		$("#publisher").val("http://ss14-team-140.divshot.io/siyathu#/"+($routeParams.channelId || 'defaultChannel')+"/publisher");
+
         (function(){
 
             var channel = ($routeParams.channelId || 'defaultChannel') + '::' + 'editor<->publisher';
@@ -207,7 +209,7 @@
         })();
 
         (function(){
-            $("#carousel1").owlCarousel({ pagination : false });
+            $("#carousel1").owlCarousel({ pagination : false,items:3});
             $("#carousel2").owlCarousel({ pagination : false });
             $('.bootstrap-popover').popover({
             	 placement : 'top',
