@@ -1,21 +1,24 @@
 <div class="large-12 columns">
 	<div class="row">
-		<video id="editor-preview-video" width="100%" height="100%" controls>
+		<video id="editor-preview-video" width="100%" height="100%" src="" controls>
 		</video>
+	</div>
+	<div class="row">
+	  	<input id="publisher" type="text" value=""/>
 	</div>
 	<div class="row" id="vclips">
 		<div class="row">
 			<div id="carousel1" class="owl-carousel">
-				<div id="editor-remote-videos" class="bootstrap-popover" data-content='<video controls autoplay="true" class="thumbs"><source src="" type="video/mp4"> browser does not support the video tag.</video>'>
-                    <!--REMOTE VIDEOS-->
-				</div>
+<!-- 				<div id="editor-remote-videos" class="bootstrap-popover" data-content='<video controls autoplay="true" class="thumbs"><source src="" type="video/mp4"> browser does not support the video tag.</video>'> -->
+                    <!--REMOTE VIDEOS-->                   
+<!-- 				</div> -->					
 			</div>
 		</div>
 		<div class="row">
 			<div id="carousel2" class="owl-carousel">
-				<div class="bootstrap-popover" data-content='<video controls autoplay="true" class="thumbs"><source src="" type="video/mp4"> browser does not support the video tag.</video>'>
+<!-- 				<div class="bootstrap-popover" data-content='<video controls autoplay="true" class="thumbs"><source src="" type="video/mp4"> browser does not support the video tag.</video>'> -->
 					<!--LOCAL CLIPS-->
-				</div>
+<!-- 				</div> -->
 			</div>
 		</div>
 	</div>
@@ -23,6 +26,22 @@
 <style type="text/css" media="screen">
 	video {
 		width: 100%;
+		height: 100%; 
+	}
+	#editor-preview-video {
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+		display: block;
+		margin-top:1.5em;
+		margin-bottom: 1.5em;
+	}
+	#vclips{
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+		display: block;
+		padding: 1em;
 	}
 	.thumbs{
 		width:150%;
@@ -35,10 +54,16 @@
 		max-width: 430px;
 		max-height: 340px;
 	}
-	.close{
-		float:right;
-	}
 	.vid {
 	    display: inline-block;
+	}
+	#publisher{
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	.owl-wrapper{
+		width:100%;
+		max-width: 600px; 
 	}
 </style>
