@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" ng-app="siyathu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,16 +8,6 @@
 	<script src="https://cdn.firebase.com/v0/firebase.js"></script><!-- Firebase -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script><!-- AngularJS -->
 	<script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script><!-- AngularFire Plugin -->
- 
-<script>
-  var myApp = angular.module("siyathu", ["firebase"]);
- 
-  function MyController($scope, $firebase) {
-    var peopleRef = new Firebase("https://ss14-team-140.firebaseio.com/channels");
-    // Automatically syncs everywhere in realtime
-    $scope.channels = $firebase(channelRef);
-  }
-</script>
     <style>
 
         html, body {
@@ -133,6 +123,7 @@
 			color: rgb(42, 17, 17);
 			margin: 1%;
 			display: inline-block;
+			font-family: 'Alegreya Sans SC';
 		}
     </style>
     <style id="verticals">
@@ -140,21 +131,7 @@
     </style>
 </head>
 <body>
-<script>
-function MyController($scope, $firebase) {
-  var channelRef = new Firebase("https://ss14-team-140.firebaseio.com/channels");
-  //$scope.channels = $firebase(channelRef);
- // $scope.addChannel = function() {
-    // AngularFire $add method
-  //  $scope.channels.$add($scope.newChannel);
-    //or add a new person manually
-   // peopleRef.update({name: 'Alex', age: 35});
- 
-  //  $scope.newChannel = "";
-  //}
-}
-</script>
-    <main id="wrapper">
+    <main id="wrapper" ng-controller="MyController">
 
         <div class="fullBlock fullHeight homepage light">
             <div class="inner">
@@ -194,26 +171,11 @@ function MyController($scope, $firebase) {
 
         <div class="fullBlock fullHeight homepage light">
             <div class="inner">
-                <h3 class="homepage sectionhead">Active Channels<br> <small>(coming soon)</small></h3>
-				<a href="#" class="channel_button">Create a new Channel</a> 
-<script>
-
-var julieRef = new Firebase('https://ss14-team-140.firebaseio.com/channels');
-julieRef.on('value', function(snapshot) {
-  if(snapshot.val() === null) {
-    alert('User julie does not exist.');
-  } else {
-    var firstName = snapshot.val().name.first;
-    var lastName = snapshot.val().name.last;
-    alert('User julie’s full name is: ' + firstName + ' ' + lastName);
-  }
-});
-	</script>			
-                <ul style="display:none">
-                    <li><a href="#/Channel1">Channel 1</a></li>
-                    <li><a href="#/Channel1">Channel 1</a></li>
-                    <li><a href="#/Channel1">Channel 1</a></li>
-                    <li><a href="#/Channel1">[ new channel ]</a></li>
+                <h3 class="homepage sectionhead">Active Channels</h3>
+				<div class="channel_button"><div style="margin-left:-8px"><input type="text" ng-model="newChannel" placeholder="New Channel Name" style="border:none; border-bottom: dotted 1px #DEDCDE; background-color: transparent; font-family:Alegreya Sans SC" ></div>
+				<a href="siyathu.html#/{{newChannel}}/editor" >Join</a></div>
+                <ul>
+                    <li ng-repeat="(channel, info) in channels"><a href="siyathu.html#/{{channel}}/">{{channel}}</a></li>
                 </ul>
             </div>
         </div>
@@ -240,6 +202,13 @@ julieRef.on('value', function(snapshot) {
             resetFullHeightStyles();
 
         })();
+		
+		var myApp = angular.module("siyathu", ["firebase"]);
+		function MyController ($scope, $firebase) {
+			var channelRef = new Firebase("https://ss14-team-140.firebaseio.com/channels");
+			$scope.channels = $firebase(channelRef);
+		}
+		
     </script>
 </body>
 </html>
