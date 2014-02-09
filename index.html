@@ -9,6 +9,9 @@
 	<meta name="twitter:description" content="Siyathu is an online live video mixing web app which reduces the cost of high end hardware and software by providing a lightweight infrastructure for live video production.">
 	<meta name="twitter:image" content="site_assets/images/siyathu.svg">
 	<meta property="og:image" content="site_assets/images/siyathu.svg"/>
+	<meta property="og:title" content="Siyathu"/>
+	<meta property="og:url" content="http://ss14-team-140.divshot.io/"/>
+	<meta property="og:site_name" content="Siyathu Online Video Mixer"/>
     <title>Siyathu | Online Video Mixer</title>
     <link href='http://fonts.googleapis.com/css?family=Lovers+Quarrel|Alegreya+Sans+SC:300,400' rel='stylesheet' type='text/css'>
 	<script src="https://cdn.firebase.com/v0/firebase.js"></script><!-- Firebase -->
@@ -181,7 +184,7 @@
 				<div class="channel_button"><div style="margin-left:-8px"><input type="text" ng-model="newChannel" placeholder="New Channel Name" style="border:none; border-bottom: dotted 1px #DEDCDE; background-color: transparent; font-family:Alegreya Sans SC" ></div>
 				<a href="siyathu.html#/{{newChannel}}/editor" >Join</a></div>
                 
-                    <div ng-repeat="(channel, info) in channels" style="float:left;"><a href="siyathu.html#/{{channel}}/">{{channel}}</a></div>
+                    <div ng-repeat="(channel, info) in channels" ><a href="siyathu.html#/{{channel}}/" style="font-family:Alegreya Sans SC">{{channel}}</a></div>
                 
             </div>
         </div>
